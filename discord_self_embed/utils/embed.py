@@ -30,7 +30,7 @@ class Embed:
     def set_image(self, url) -> None:
         self.params["image"] = url
 
-    def generate_url(self, *, hide_url=False, shorten_url=True, shortener=None) -> str:
+    def generate_url(self) -> str:
         for key in list(self.params.keys()):
             if self.params[key] == "" or self.params[key] is None:
                 del self.params[key]
